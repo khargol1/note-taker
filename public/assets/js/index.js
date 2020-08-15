@@ -59,7 +59,7 @@ var handleNoteSave = function() {
   saveNote(newNote).then(function(data) {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  }).catch(err => console.log(err));
 };
 
 // BONUS Delete the clicked note
